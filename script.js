@@ -1,10 +1,10 @@
 
 // 🔻날짜 기입 (현재 2027년 1월 1일 12시 30분으로 설정되어있음)
-const WEDDING_YEAR = 2026; // 년도
-const WEDDING_MONTH = 10; // 월
-const WEDDING_DAY = 3;  // 일
+const WEDDING_YEAR = 2027; // 년도
+const WEDDING_MONTH = 1; // 월
+const WEDDING_DAY = 1;  // 일
 
-const WEDDING_HOUR = 15; //시
+const WEDDING_HOUR = 12; //시
 const WEDDING_MINUTE = 30;  //분
 const WEDDING_DATE = new Date(
   WEDDING_YEAR,
@@ -235,14 +235,16 @@ function renderKakaoMap() {
   if (kakaoMapRendered) return;
   if (typeof daum === "undefined" || !daum.roughmap || !daum.roughmap.Lander) return;
   new daum.roughmap.Lander({
-    timestamp: "1784534821524",
-    key: "rj4exdppya4",
+
+// 🔻네비게이션 설정 : 카카오맵에서 소스생성하기 진행(현재 웨딩시그니처로 되어있음, 가이드북 참고)
+    timestamp: "1781420580863",
+    key: "2qxf2rzqqciv",
+
     mapWidth: "100%",
     mapHeight: "280"
   }).render();
   kakaoMapRendered = true;
 }
-
 
 window.addEventListener("load", function () {
   const intro = document.getElementById("intro-overlay");
