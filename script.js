@@ -237,7 +237,6 @@ function renderKakaoMap() {
   new daum.roughmap.Lander({
     timestamp: "1784532479564",
     key: "rj2qyvn3hhe",
-
     mapWidth: "100%",
     mapHeight: "280"
   }).render();
