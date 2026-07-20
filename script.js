@@ -231,15 +231,20 @@ function copyText(text) {
     });
 }
 let kakaoMapRendered = false;
+
 function renderKakaoMap() {
   if (kakaoMapRendered) return;
+  
+  // 카카오맵 스크립트가 정상적으로 로드되었는지 확인
   if (typeof daum === "undefined" || !daum.roughmap || !daum.roughmap.Lander) return;
+  
   new daum.roughmap.Lander({
-    timestamp: "1784534821524",
-    key: "rj4exdppya4",
-    mapWidth: "100%",
-    mapHeight: "280"
+    timestamp: "1784533566548", // 새로운 타임스탬프
+    key: "r6gjjrgpepw",         // 새로운 인증 키
+    mapWidth: "100%",           // 기존 디자인 유지를 위해 100% 적용
+    mapHeight: "280"            // 기존 디자인 유지를 위해 280 적용
   }).render();
+  
   kakaoMapRendered = true;
 }
 
