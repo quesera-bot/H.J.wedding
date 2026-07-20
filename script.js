@@ -231,18 +231,15 @@ function copyText(text) {
     });
 }
 let kakaoMapRendered = false;
-
 function renderKakaoMap() {
   if (kakaoMapRendered) return;
   if (typeof daum === "undefined" || !daum.roughmap || !daum.roughmap.Lander) return;
-  
   new daum.roughmap.Lander({
-    timestamp: "1784533566548", 
-    key: "r6gjjrgpepw",         
-    mapWidth: "100%",           
-    mapHeight: "280"            
+    timestamp: "1784533566548",
+    key: "r6gjjrgpepw",
+    mapWidth: "100%",
+    mapHeight: "280"
   }).render();
-  
   kakaoMapRendered = true;
 }
 
